@@ -14,7 +14,7 @@ interface CheckboxItem {
 }
 
 export default function Home() {
-    // Need to call an API for this data
+  // Need to call an API for this data
   const [checkboxes, setCheckboxes] = useState<CheckboxItem[]>([
     {
       id: 1,
@@ -59,7 +59,7 @@ export default function Home() {
     // Add more checkbox objects as needed
   ]);
 
-//   Check box function to change and updated the data
+  //   Check box function to change and updated the data
   const handleCheckboxChange = (id: number) => {
     setCheckboxes((prevState) =>
       prevState.map((checkbox) =>
@@ -73,15 +73,17 @@ export default function Home() {
   return (
     <Layout>
       <LayoutCardsGrid className="flex justify-center">
-        <MoojiioCard className="w-11/12 h-[80vh] grid md:w-6/12 p-10 overflow-auto">
+        <MoojiioCard className="w-11/12 h-[80vh] grid md:w-6/12 p-2 md:p-10 overflow-auto">
           {/* Title and text  */}
-          <div className="flex flex-col items-center not-italic font-medium text-2xl text-center text-gray-800">
+          <div className="flex flex-col items-center not-italic font-medium  text-lg md:text-2xl text-center text-gray-800">
             <div>You can choose Focus Areas</div>
-            <div className="flex">
-              <div className="text-yellow-600 mr-1">based on feedback</div>
-              <div>from your peers</div>
+            <div className="flex flex-wrap justify-center">
+              <div className="text-yellow-600 mr-1 whitespace-nowrap">
+                based on feedback
+              </div>
+              <div className="whitespace-nowrap">from your peers</div>
             </div>
-            <div className="not-italic font-normal text-sm text-center text-gray-600">
+            <div className="not-italic font-normal text-xs md:text-sm text-center text-gray-600">
               Your team wants you to improve in the below areas. Select up to 3.
             </div>
 

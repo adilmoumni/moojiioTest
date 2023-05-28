@@ -20,11 +20,11 @@ const MoojiioCheckbox: React.FC<MoojiioCheckboxProps> = ({
       className={`border 
       ${checked ? "border-blue-500" : "border-gray-300"} 
       ${checked ? "bg-checkbox-bg" : "bg-white"} 
-      p-4 rounded-lg flex items-center w-full m-1 cursor-pointer`}
+      p-1 md:p-4 rounded-lg flex items-center w-full m-1 cursor-pointer`}
       onClick={onChange}
     >
       <div className="p-2">
-        <div className="flex items-center mr-4 mb-2">
+        <div className="flex items-center md:mr-4 mb-2">
           <input
             type="checkbox"
             id="A3-yes"
